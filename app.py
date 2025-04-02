@@ -20,7 +20,7 @@ EC2_HTTP_URL = "http://ec2-13-232-234-201.ap-south-1.compute.amazonaws.com:5678/
 async def proxy_request(request: Request):
     try:
         body = await request.json()  # Get JSON body from request
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(timeout=120.0) as client:
             response = await client.post(EC2_HTTP_URL, json=body)  # Forward request to N8N webhook
         return response.json()  # Return response from N8N
     except Exception as e:
