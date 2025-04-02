@@ -14,7 +14,7 @@ app.add_middleware(
 )
 
 # Set the complete N8N webhook URL
-EC2_HTTP_URL = "http://ec2-13-58-27-158.us-east-2.compute.amazonaws.com:5678/webhook/0b95a964-2518-4250-929c-0e6f6ba766ab"
+EC2_HTTP_URL = "http://ec2-13-232-234-201.ap-south-1.compute.amazonaws.com:5678/webhook/51ffbee7-d160-4a49-898b-abb7d5463668"
 
 @app.post("/")
 async def proxy_request(request: Request):
