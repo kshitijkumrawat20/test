@@ -11,7 +11,7 @@ app.use(cors());
 
 // N8N Webhook URL (Replace this with your actual URL)
 const EC2_HTTP_URL =
-  "http://redirectmeto.com/http://ec2-13-58-27-158.us-east-2.compute.amazonaws.com:5678/webhook/0b95a964-2518-4250-929c-0e6f6ba766ab";
+  "http://ec2-13-58-27-158.us-east-2.compute.amazonaws.com:5678/webhook/0b95a964-2518-4250-929c-0e6f6ba766ab";
 
 // Proxy Route
 app.post("/", async (req, res) => {
